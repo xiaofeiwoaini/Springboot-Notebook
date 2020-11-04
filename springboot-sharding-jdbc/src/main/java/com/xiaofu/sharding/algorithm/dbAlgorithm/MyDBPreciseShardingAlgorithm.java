@@ -7,7 +7,6 @@ import org.apache.shardingsphere.api.sharding.standard.PreciseShardingValue;
 import java.util.Collection;
 
 /**
- * @author xiaofu 公众号【程序员内点事】
  * @description 自定义标准分库策略
  * @date 2020/10/30 13:48
  */

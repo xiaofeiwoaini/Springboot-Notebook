@@ -43,4 +43,6 @@ public class TConfig {
     public void setLastModifyTime(Date lastModifyTime) {
         this.lastModifyTime = lastModifyTime;
     }
+
+
 }

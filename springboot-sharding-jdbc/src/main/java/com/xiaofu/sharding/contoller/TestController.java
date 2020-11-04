@@ -2,15 +2,12 @@ package com.xiaofu.sharding.contoller;
 
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.xiaofu.sharding.mapper.ConfigRepository;
 import com.xiaofu.sharding.mapper.OrderItemRepository;
 import com.xiaofu.sharding.mapper.OrderRepository;
 import com.xiaofu.sharding.model.TConfig;
 import com.xiaofu.sharding.model.TOrder;
 import com.xiaofu.sharding.model.TOrderDto;
-import com.xiaofu.sharding.model.TOrderItem;
-import com.xiaoju.uemc.tinyid.client.utils.TinyId;
 import org.apache.shardingsphere.api.hint.HintManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,7 +19,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
-import java.util.UUID;
 
 /**
  * @Author: xiaofu
@@ -56,7 +52,7 @@ public class TestController {
             TOrder order = new TOrder();
             order.setOrderNo("A000" + i);
             order.setCreateName("订单 " + i);
-            order.setUserId(Long.parseLong(i + ""));
+            //order.setUserId(Long.parseLong(i + ""));
             order.setPrice(new BigDecimal("" + i));
             orderRepository.insert(order);
 
@@ -114,7 +110,4 @@ public class TestController {
         return orderRepository.selectOrderListPage();
     }
 
-    public static void main(String[] args) {
-
-    }
 }
